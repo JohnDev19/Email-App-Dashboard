@@ -4,6 +4,8 @@
 
 Email App Dashboard - interface for managing emails. It features a responsive layout, a sidebar, a compose email modal, and a list of emails. This is built using HTML, CSS, and JavaScript.
 
+![Email App Dashboard](IMG_20241107_181105.jpg)
+
 ## Technologies Used
 
 - HTML
