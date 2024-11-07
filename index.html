@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Modern Email App</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="app-logo">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email App</span>
+                </div>
+                <div class="sidebar-close" onclick="toggleSidebar()">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <button class="compose-btn">Compose</button>
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-inbox"></i>
+                        <span>Inbox</span>
+                        <span class="badge">3</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Sent</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-star"></i>
+                        <span>Starred</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-trash"></i>
+                        <span>Trash</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <div class="menu-trigger" onclick="toggleSidebar()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Search emails..."/>
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="user-menu">
+                    <div class="notification-icon">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">5</span>
+                    </div>
+                    <div class="user-profile">
+                        <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="User  Avatar" class="user-avatar">
+                        <div class="user-info">
+                            <span>John Doe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="email-list">
+                <div class="email-item">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Sender Avatar" class="email-avatar">
+                    <div>
+                        <div class="email-subject">Important Project Update</div>
+                        <div class="email-preview">Hey team, I wanted to share some updates on our current project...</div>
+                        <div class="email-date">10:30 AM</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Sender Avatar" class="email-avatar">
+                    <div>
+                        <div class="email-subject">Meeting Reminder: Quarterly Review</div>
+                        <div class="email-preview">This is a reminder that we have our quarterly review meeting scheduled for...</div>
+                        <div class="email-date">Yesterday</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Sender Avatar" class="email-avatar">
+                    <div>
+                        <div class="email-subject">New Feature Release</div>
+                        <div class="email-preview">We're excited to announce the release of our latest feature...</div>
+                        <div class="email-date">May 15</div>
+                                            </div>
+                </div>
+                <div class="email-item">
+                    <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Sender Avatar" class="email-avatar">
+                    <div>
+                        <div class="email-subject">Holiday Party Invitation</div>
+                        <div class="email-preview">You're invited to our annual holiday party! Join us for an evening of...</div>
+                        <div class="email-date">May 14</div>
+                    </div>
+                </div>
+                <div class="email-item">
+                    <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Sender Avatar" class="email-avatar">
+                    <div>
+                        <div class="email-subject">Security Update Required</div>
+                        <div class="email-preview">Please update your password as part of our regular security measures...</div>
+                        <div class="email-date">May 13</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="composeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Compose Email</h2>
+            <form id="composeForm">
+                <input type="text" id="to" placeholder="To" required>
+                <input type="text" id="subject" placeholder="Subject" required>
+                <textarea id="body" placeholder="Email body" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
